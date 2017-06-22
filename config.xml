@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.namanquah.facultydevseminar"
+    versionCode = "10"
+    version     = "0.8.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Expense Tracker</name>
+
+  <description>
+      Expense Tracker
+  </description>
+
+  <author href="https://rightclicksystems.org" email="nathan@rightclicksystems.org">
+      N Amanquah
+  </author>
+
+   <icon src="icon.png" />
+    <splash src="splash.png" />
+
+</widget>

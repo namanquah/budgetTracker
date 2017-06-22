@@ -1,0 +1,365 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Budget Tracker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+    <link rel="stylesheet" href="./jqm/jquery.mobile-1.4.5.min.css">  
+    
+    
+    <!-- <script src="./jqm/jquery-1.12.4.min.js"></script>   -->
+    
+    
+
+    <!-- new stuff added  -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+        
+
+
+    <link rel="stylesheet" href="vendor/waves/waves.min.css" />
+        <link rel="stylesheet" href="vendor/wow/animate.css" />
+        <link rel="stylesheet" href="css/nativedroid2.css" />
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<!-- new scripts, move to just before body  -->
+
+        <script src="./jqm/jquery-2.1.4.min.js"></script>
+        <script src="./jqm/jquery.mobile-1.4.5.min.js"></script>
+        
+
+        <!-- <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>  -->
+        <script src="./jqm/jquery-ui.min.js"></script>
+
+        <script src="vendor/waves/waves.min.js"></script>
+        <script src="vendor/wow/wow.min.js"></script>
+        <script src="js/nativedroid2.js"></script>
+        <script src="nd2settings.js"></script>
+
+
+
+</head>
+<body>
+    <div data-role="page" id= "home" >
+
+        <div data-role="header">
+            <h1>Personal Budget Tracker</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Choose an action</p>
+            <a href="#add" data-role="button" data-transition="slide">Add Transaction</a>
+            <a href="#summary" data-role="button" data-transition="slide" id="summary">Summary-web</a>
+            <a href="#view" data-role="button" data-transition="slide">View Transactions</a>
+            <a href="#setup" data-role="button" data-transition="slide">Set up Budget</a>
+            <a href="#categories" data-role="button" data-transition="slide">Categories</a>
+            <a href="#settings" data-role="button" data-transition="slide">Settings</a>
+            <a href="#about" data-role="button" data-transition="slide">About</a>
+
+            <div id="responsediv">Response</div>
+        </div>  <!-- /content -->
+
+        <div data-role="footer">
+            <h4> 30/May - 01/Jun </h4>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <!--------------------------- -->
+    <div data-role="page" id= "view">
+
+        <div data-role="header">
+
+              <a href="#home" data-role="button"  data-icon="home">Home</a>
+            <h1>View details</h1>
+            
+            
+
+
+
+
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            
+            <ul data-role="listview"  data-inset="true" data-filter="true">
+              <li><a href="#">List Item</a></li>
+              <li><a href="#">List Item</a></li>
+              <li><a href="#">List Item</a></li>
+          </ul>
+
+            <a href="#" data-role="button" id="web">Fetch online data</a>
+            <a href="#" data-role="button" data-rel="back">Go Back</a>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4> select an item to view transaction detail</h4>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <!--------------------------- -->
+    <div data-role="page" id= "settings">
+        <div data-role="header">
+            <a href="#home" data-role="button"  data-icon="home">Home</a>
+            <h1>Settings</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Options</p>
+            <form method= "post" action="demoform.php">  
+                <!--  <div data-role="fieldcontain">  -->
+                <label for="text-basic">Firstname:</label>
+                <input type="text" name="text-basic" id="firstname" value="">
+                <label for="text-basic">Surname:</label>
+                <input type="text" name="text-basic" id="surname" value="">
+                <label for="text-basic">Department:</label>
+                <input type="text" name="text-basic" id="department" value="">
+            </form>
+
+            <a href="#save" data-role="button" id="save" >Save</a>
+            <a href="#" data-role="button" data-rel="back">Go Back</a>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <p> 30/May - 01/Jun </p>           
+        </div><!-- /footer --> 
+    </div><!-- /page -->
+
+    <!--------------------------- -->
+    <div data-role="page" id= "tues">
+        <div data-role="header">
+              <a href="#home" data-role="button"  data-icon="home">Home</a>
+            <h1>Tuesday</h1>
+
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+
+            <table data-role="table" id= "table-column-toggle" data-role="reflow" class="ui-responsive table-stroke">
+
+                <thead>
+                    <tr><th>Time</th><th>Activity</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>8:15 - 8:45am</td><td>Coffee/Tea/Juice/Snacks</td> </tr>
+                    <tr><td>8:45 - 10:30am</td><td>Intro to POGIL 1</td> </tr>
+                    <tr><td>10:30 - 11:00am</td><td>Break</td> </tr>
+                    <tr><td>11:00am - 12:40pm</td><td>Intro to POGIL 2</td> </tr>
+                    <tr><td>12:45 - 2:00pm</td><td>Lunch - CS Faculty &amp; FIs sit together with Clif to discuss FOSS interest</td> </tr>
+                    <tr><td>2:00 - 3:45pm</td><td>Learning Objectives</td> </tr>
+                    <tr><td> 4:00 -5:00pm</td><td> - </td> </tr>
+
+                </tbody>
+            </table>
+            <a href="#" data-role="button" data-rel="back">Go Back</a>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4> 30/May - 01/Jun </h4>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+
+    <!--------------------------- -->
+    <div data-role="page" id= "wed">
+        <div data-role="header">
+              <a href="#home" data-role="button"  data-icon="home">Home</a>
+            <h1>Wednesday</h1>
+
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Wednesday</p>
+            <table data-role="table" id= "table-column-toggle" data-role="reflow" class="ui-responsive table-stroke">
+
+                <thead>
+                    <tr><th>Time</th><th>Activity</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>8:15 - 8:45am</td><td>Coffee/Tea/Juice/Snacks</td> </tr>
+                    <tr><td>8:45 - 10:30am</td><td>Intro to POGIL 1</td> </tr>
+                    <tr><td>10:30 - 11:00am</td><td>Break</td> </tr>
+                    <tr><td>11:00am - 12:40pm</td><td>Intro to POGIL 2</td> </tr>
+                    <tr><td>12:45 - 2:00pm</td><td>Lunch - CS Faculty &amp; FIs sit together with Clif to discuss FOSS interest</td> </tr>
+                    <tr><td>2:00 - 3:45pm</td><td>Learning Objectives</td> </tr>
+                    <tr><td> 4:00 -5:00pm</td><td> - </td> </tr>
+
+                </tbody>
+            </table>            
+
+            <a href="#" data-role="button" data-rel="back">Go Back</a>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4> 30/May - 01/Jun </h4>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+
+    <!--------------------------- -->
+    <div data-role="page" id= "thurs">
+        <div data-role="header">
+              <a href="#home" data-role="button"  data-icon="home">Home</a>
+            <h1>Thursday</h1>
+
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Thursday</p>
+
+            <table data-role="table" id= "table-column-toggle" data-role="reflow" class="ui-responsive table-stroke">
+
+                <thead>
+                    <tr><th>Time</th><th>Activity</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>8:15 - 8:45am</td><td>Coffee/Tea/Juice/Snacks</td> </tr>
+                    <tr><td>8:45 - 10:30am</td><td>Intro to POGIL 1</td> </tr>
+                    <tr><td>10:30 - 11:00am</td><td>Break</td> </tr>
+                    <tr><td>11:00am - 12:40pm</td><td>Intro to POGIL 2</td> </tr>
+                    <tr><td>12:45 - 2:00pm</td><td>Lunch - CS Faculty &amp; FIs sit together with Clif to discuss FOSS interest</td> </tr>
+                    <tr><td>2:00 - 3:45pm</td><td>Learning Objectives</td> </tr>
+                    <tr><td> 4:00 -5:00pm</td><td> - </td> </tr>
+
+                </tbody>
+            </table>
+
+            <a href="#" data-role="button" data-rel="back">Go Back</a>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4> 30/May - 01/Jun </h4>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+
+
+    <!--------------------------- -->
+    <div data-role="page" id= "checkin">
+        <div data-role="header">
+              <a href="#home" data-role="button"  data-icon="home">Home</a>
+            <h1>Check in</h1>
+
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Scan QR code to indicate attendance at a session.</p>
+
+            <a href="#" data-role="button" id="scan">Scan</a>
+
+            <a href="#" data-role="button" data-rel="back">Go Back</a>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4> 30/May - 01/Jun </h4>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+
+    <!--------------------------- -->
+    <div data-role="page" id= "about">
+        <div data-role="header">
+              <a href="#home" data-role="button"  data-icon="home">Home</a>
+            <h1>About</h1>
+
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <h2>Faculty Development Seminar-2017</h2>
+            <p>About this year's faculty development seminar</p>
+            <h2>Facilitator</h2>
+            <p> About Cliff</p>
+            <h2> About the app</h2>
+            <p>Hurriedly hacked together</p>
+
+            <a href="#" data-role="button" data-rel="back">Go Back</a>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4> 30/May - 01/Jun </h4>
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+
+
+
+</body>
+</html>
+<script>
+
+    $('#scan').click(function(){
+        alert("clicked");
+
+    });
+
+    $('#save').click(function(){
+
+        if(typeof(Storage)!=="undefined"){
+            localStorage.setItem("surname",$("#surname").val() )
+            localStorage.setItem("firstname",$("#firstname").val() )
+            localStorage.setItem("department",$("#department").val() )
+            alert("Saved locally");
+        }
+        else{
+           alert("Not Saved");   
+
+       }
+
+   });
+    
+
+</script>
+
+<script>
+   $(function() {
+    $("#web").click(function() {
+      alert("clicked 2");  
+      //$('#responsediv').html("done");
+         
+      /*
+      var fname = $("input#firstname2").val();
+      var sname = $("input#surname2").val();
+      var dataString = 'firstname2='+ fname + '&surname2=' + sname;  */
+      var dataString = 'firstname2='+ 'fname' + '&surname2=' + 'sname';
+      console.log(dataString);
+      $.ajax({
+          crossDomain: "true",
+          type: "POST",
+          url: "http://mwc.rightclicksystems.org/processform2.php",
+          data: dataString,
+          success: function(data, textStatus, jqXHR) {
+            $('#responsediv').html("<h2>Info passed on!</h2>")
+            .append("<p>We will be in touch soon.</p>")
+            .hide()
+            .fadeIn(1500, function() {
+                $('#responsediv').append("OK..."+data+"  "+textStatus);
+            });
+        },
+        error: function(jqXHR, textStatus, errorThrown) 
+        {
+            alert("failed");
+            $('#responsediv').html(jqXHR.responseText+"--"+textStatus+" --  "+errorThrown+"."+jqXHR.responseText)
+        }
+    });
+      return false;
+  }); 
+   });
+
+</script>
